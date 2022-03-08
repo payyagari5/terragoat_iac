@@ -2,6 +2,11 @@ name: Prisma Cloud IaC Scan Example
 on:  
   pull_request
 
+jobs:
+  prisma_cloud_iac_scan:
+    runs-on: ubuntu-latest
+    name: Run Prisma Cloud IaC Scan to check 
+
 steps:
       - name: Checkout repo
         uses: actions/checkout@v2
