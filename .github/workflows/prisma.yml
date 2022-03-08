@@ -17,3 +17,10 @@ jobs:
           PRISMA_API_URL: https://api.uk.prismacloud.io
         with:
           api-key: ${{ secrets.BC_API_KEY }}
+          
+        - name: Upload scan result artifact
+          uses: actions/upload-artifact@v2
+          if: success() || failure()
+          with:
+            name: iac_scan_result
+            path: ${{ steps.iac-scan.outputs.iac_scan_result_path }}
