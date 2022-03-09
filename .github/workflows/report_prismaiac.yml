@@ -21,6 +21,7 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           soft_fail: false
+          failure_criteria:  High:1000,Medium:1000,Low:1000,Operator:and
           
       #- name: Upload Prisma IAC Scan results
        # uses: github/codeql-action/upload-sarif@v1
