@@ -20,15 +20,18 @@ jobs:
           PRISMA_API_URL: https://api.uk.prismacloud.io
         with:
           api-key: ${{ secrets.BC_API_KEY }}
-	  
-      - name: Upload Prisma IAC scan results
-	      uses: github/codeql-action/upload-sarif@v1
-	      if: always()
-	      with:
-          sarif_file: 'results.sarif'
-	   
-      - name: Archive Scan Report
+          
+      - name: Upload Prisma IAC Scan results
+        uses: github/codeql-action/upload-sarif@v1
+        if: always()
+        with:
+         sarif_file: 'results.sarif'
+      - name: Scan Report
         uses: actions/upload-artifact@v2
         with:
-          name: scan-report
-          path: 'results.sarif'
+         name: scan-report
+         path: 'results.sarif'
+        
+          
+
+          
