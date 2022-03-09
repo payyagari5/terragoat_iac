@@ -20,7 +20,7 @@ jobs:
           PRISMA_API_URL: https://api.uk.prismacloud.io
         with:
           api-key: ${{ secrets.BC_API_KEY }}
-          soft_fail: false
+          soft_fail: true
           output_format: sarif
           
       - name: Upload Prisma IAC Scan results
