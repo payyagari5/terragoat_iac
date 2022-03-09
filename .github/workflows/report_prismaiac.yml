@@ -21,18 +21,18 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           soft_fail: true
-          output_format: json
+          output_format: sarif
           
       - name: Upload Prisma IAC Scan results
-        uses: github/codeql-action/upload-json@v1
+        uses: github/codeql-action/upload-sarif@v1
         if: always()
         with:
-         sarif_file: 'results.json'
+         sarif_file: 'results.sarif'
       - name: Scan Report
         uses: actions/upload-artifact@v2
         with:
          name: scan-report
-         path: 'results.json'
+         path: 'results.sarif'
         
           
 
