@@ -2,6 +2,8 @@ name: Prisma Cloud IaC Scan Example
 on: 
   push:
     branches: main
+  pull_request:
+    branches: main
 
 jobs:
   prisma_cloud_iac_scan:
