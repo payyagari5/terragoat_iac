@@ -33,7 +33,3 @@ jobs:
         with:
          name: scan-report
          path: 'results.sarif'
-        
-          
-
-          
