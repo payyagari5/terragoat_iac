@@ -28,6 +28,7 @@ jobs:
         if: always()
         with:
          sarif_file: 'results.sarif'
+         
       - name: Scan Report
         uses: actions/upload-artifact@v2
         with:
