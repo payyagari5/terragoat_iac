@@ -1,4 +1,4 @@
-name: Prisma Cloud IaC Scan 
+name: Prisma Cloud IaC Scan Example
 on: 
   push:
     branches: main
